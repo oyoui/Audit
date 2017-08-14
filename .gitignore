@@ -101,3 +101,6 @@ ENV/
 .mypy_cache/
 audit/migirations/
 .idea/
+*.pyc
+audit/__pycache__/
+audit/backend/__pycache__/
