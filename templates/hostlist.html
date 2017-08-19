@@ -40,8 +40,11 @@
             <div class="panel-heading">
                 <h3 class="panel-title">主机组</h3>
             </div>
+
             <div class="panel-body">
+
                 <ul class="list-group">
+
                 {% for group in  request.user.account.host_groups.all %}
 
                     <li class="list-group-item " onclick="GetHostlist({{ group.id }},this)"><span class="badge badge-success xxx">{{ group.host_user_binds.count }}</span>{{ group.name }}</li>

@@ -22,9 +22,16 @@ urlpatterns = [
     url(r'^$', views.index),
     url(r'^login/$', views.user_login),
     url(r'^logout/$', views.user_logout),
+    #主机列表
     url(r'^hostlist/$', views.host_list,name="host_list"),
+
+    #多行命令页面
     url(r'^multitask/cmd/$', views.multi_cmd ,name="multi_cmd"),
+    #命令执行
+    url(r'^multitask/$', views.multitask ,name="multitask"),
     url(r'^api/hostlist/$', views.get_host_list ,name="get_host_list"),
+    #命令结果
+    url(r'^multitask/result/$', views.multitask_result ,name="get_task_result"),
 
     url(r'^api/token/$', views.get_token ,name="get_token"),
 ]
